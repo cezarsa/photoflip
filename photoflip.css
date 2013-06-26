@@ -1,0 +1,77 @@
+.photoflip-image-placeholder {
+    display: inline-block;
+    font-size: 0;
+    vertical-align: top;
+    -webkit-perspective: 500px;
+    -moz-perspective: 500px;
+    -ms-perspective: 500px;
+    perspective: 500px;
+}
+
+.photoflip-image-placeholder:hover .photoflip-flipper.right {
+    -webkit-transform: rotateY(180deg);
+}
+
+.photoflip-image-placeholder:hover .photoflip-flipper.left {
+    -webkit-transform: rotateY(-180deg);
+}
+
+.photoflip-image-placeholder:hover .photoflip-flipper.top {
+    -webkit-transform: rotateX(-180deg);
+}
+
+.photoflip-image-placeholder:hover .photoflip-flipper.bottom {
+    -webkit-transform: rotateX(180deg);
+}
+
+.photoflip-flipper-container {
+    display: inline-block;
+}
+
+.photoflip-flipper {
+    position: relative;
+    height: 100%;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    -webkit-transition: all 500ms ease-out;
+    -moz-transition: all 500ms ease-out;
+    -ms-transition: all 500ms ease-out;
+    transition: all 500ms ease-out;
+}
+
+.photoflip-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.photoflip-front {
+    z-index: 0;
+}
+
+.photoflip-flipper.right .photoflip-back {
+    -webkit-transform: rotateY(180deg);
+}
+
+.photoflip-flipper.left .photoflip-back {
+    -webkit-transform: rotateY(-180deg);
+}
+
+.photoflip-flipper.top .photoflip-back {
+    -webkit-transform: rotateX(-180deg);
+}
+
+.photoflip-flipper.bottom .photoflip-back {
+    -webkit-transform: rotateX(180deg);
+}
